@@ -1,7 +1,5 @@
 { pkgs, ... }:
-
 {
-  # Graphics & 32-bit drivers for Steam/Proton
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -9,12 +7,16 @@
       libva
       vulkan-tools
     ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      libva
+    ];
   };
 
-  # Steam configuration
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
   };
+
+  programs.gamemode.enable = true;
 }
