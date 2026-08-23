@@ -18,6 +18,7 @@
       ./modules/gaming.nix
       ./modules/audio.nix
       ./modules/style.nix
+      ./modules/virtualization.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

@@ -30,6 +30,6 @@ in
     nwg-look
     protonplus
     lutris
-    lazygit
+    pkgs-unstable.vm-curator
   ];
 }
