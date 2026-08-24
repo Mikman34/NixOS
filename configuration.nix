@@ -21,6 +21,8 @@
       ./modules/virtualization.nix
     ];
 
+    fileSystems."/boot".options = lib.mkForce [ "fmask=0077" "dmask=0077" ];
+
   # Use the systemd-boot EFI boot loader.
   # boot.loader.systemd-boot.enable = true;
   # boot.loader.limine.enable = true;
